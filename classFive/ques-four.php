@@ -21,35 +21,17 @@
     $arr = [0,10,80,67,60,89,91,56,45,30,95,83,99];
     $flag = 0;
 
-    foreach($arr as $array){
+    foreach($arr as $key => $array){
 
-        // echo "<pre>";
-        // echo $array;
+        if($array == 1){
+            $array++;
+            continue;
 
-        for($i=2; $i<$arr; $i++){
-
-            if($array % $i == 0){
-                $flag = 1;
-                break;
-            }
-
+            var_dump($array) ;
         }
 
-        if($flag==0){
-            echo "Prime : {$array}";
-        } else {
-            echo "Not Prime : {$array}";
-        }
-
+        
     }
-
-    // if ($flag == 1){
-    //     echo "<pre>";
-    //     echo $array;
-    // } else {
-    //     echo "<pre>";
-    //     echo $array;
-    // }
 
 ?>
 
