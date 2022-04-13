@@ -19,17 +19,15 @@
     */
 
     $arr = [0,10,80,67,60,89,91,56,45,30,95,83,99];
-    $flag = 0;
+ 
 
     foreach($arr as $key => $array){
 
-        if($array == 1){
-            $array++;
-            continue;
-
-            var_dump($array) ;
+       
+        if($key % 2 == 0){
+            echo "<pre>";
+            echo $array;
         }
-
         
     }
 

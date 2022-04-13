@@ -27,21 +27,27 @@
 
 
     $nums_list = [12, 34, 2, 6, 78]; // This is a indexed array
-    foreach ($nums_list as $prima) {
 
-        if ($prima % 2 == 0) {
-            if ($prima % 3 == 0) {
-                if ($prima % 5 == 0) {
-                    if ($prima % 7 == 0) {
-                        break;
-                    }
-                }
-            }
-        } else {
-            echo $prima . " ,";
+    
+
+    foreach($nums_list as $number){
+        $is_prime = true;
+        
+    for($i = 2; $i <= $number -1; $i++){
+        if($number % $i == 0){
+            $is_prime = false;
         }
     }
-    ?>
+
+    if($is_prime){
+        echo "{$number} is a prime number <br>";
+    } else {
+        echo "{$number} is not a prime number <br>";
+    }
+
+}
+?>
+    
 
 </body>
 
