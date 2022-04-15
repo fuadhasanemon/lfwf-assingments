@@ -10,6 +10,20 @@
     
     <?php 
 
+
+        // Question 02: 
+
+        // You have two array of emails, these are given below-
+
+        // $first_email_array = ["abc@gmail.com", "xyz@gmail.com", "demo@gmail.com"]; 
+
+        // $second_email_array = ["efg@gmail.com", "xyz@gmail.com", "dummy@gmail.com"];
+
+        // ** You have to make a single array from this two arrays
+
+        // ** And don’t keep any value in multiple time
+
+
         $first_email_array = ["abc@gmail.com", "xyz@gmail.com", "demo@gmail.com"]; 
 
         $second_email_array = ["efg@gmail.com", "xyz@gmail.com", "dummy@gmail.com"];

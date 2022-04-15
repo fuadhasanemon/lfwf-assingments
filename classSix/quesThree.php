@@ -10,6 +10,16 @@
     
     <?php
 
+
+        // Question 03:
+
+        // $citylist = array( "Black Canyon City", "Chandler", 
+        // "Flagstaff", "Gilbert", "Glendale", "Globe", "Mesa", "Miami", "Phoenix", "Peoria",
+        // "Prescott", "Scottsdale", "Sun City", "Surprise", "Tempe", "Tucson", "Wickenburg" );
+
+        // *** Split this given array into chunks 4
+
+
         $citylist = array( 
         "Black Canyon City", "Chandler", "Flagstaff", "Gilbert", 
         "Glendale", "Globe", "Mesa", "Miami", "Phoenix", "Peoria", "Prescott", "Scottsdale", 
