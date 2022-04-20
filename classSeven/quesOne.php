@@ -9,6 +9,8 @@
 
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -222,7 +224,7 @@
                 <?php foreach($singleQuestion['options'] as $ans){ ?>  
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" name="<?php echo $singleQuestion['name'] ; ?>" id="flexRadioDefault1">
                         <label class="form-check-label" for="flexRadioDefault1">
                             <?php echo $ans ; ?>
                         </label>
@@ -237,6 +239,10 @@
             </div>
 
             <?php } ?>
+
+            <div class="submit-btn py-5 text-center">
+                <button type="button" class="btn btn-outline-success custome__btn">Success</button>
+            </div>
 
         </div>
     </section>

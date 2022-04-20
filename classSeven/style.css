@@ -50,3 +50,11 @@
     font-size: 16px;
     font-weight: 400;
 }
+
+
+
+/* BTN style question one styling mcq quiz*/
+
+.custome__btn {
+    padding: 10px 35px;
+}
