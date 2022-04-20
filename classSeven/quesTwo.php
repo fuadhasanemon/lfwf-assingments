@@ -119,45 +119,35 @@
         <div class="container">
 
             <div class="row">
-            <h1 class="py-5 card__title">Our Team</h1>
+                <h1 class="py-5 card__title">Our Team</h1>
 
-            <?php foreach($ourTeam as $teamMember){ ?>
+                <?php foreach($ourTeam as $teamMember){ ?>
 
                 <div class="col-sm-4">
-                    <div class="card" >
+                    <div class="card">
                         <img src="imgs/<?php echo $teamMember['image']; ?>" class="card-img-top" alt="...">
                         <div class="card-body text-center">
                             <h5 class="card-title member__name"><?php echo $teamMember['name']; ?></h5>
                             <p class="card-text member__designation"><?php echo $teamMember['designation']; ?></p>
 
-                            
+                            <div class="socials">
 
-                                
+                                <ul>
+                                    <?php foreach(array_combine($teamMember['socials'], $teamMember['social_icons']) as $socials => $icons){ ?>
 
-                                    <div class="socials">
-                                    
-                                        <ul>
-                                        <?php foreach(array_combine($teamMember['socials'], $teamMember['social_icons']) as $socials => $icons){ ?>
-                                               
+                                    <li><a href="<?php echo $socials ; ?>"><i class="<?php echo $icons; ?>"></i></a>
+                                    </li>
 
-                                            
-                                                    <li><a href="<?php echo $socials ; ?>"><i class="<?php echo $icons; ?>"></i></a></li>
-                                              
-                                                
-                                            <?php }; ?>
-                                        </ul>
-                                        
-                                       
-                                    </div>
+                                    <?php }; ?>
+                                </ul>
 
-                                
+                            </div>
 
-                            
                         </div>
                     </div>
                 </div>
 
-            <?php } ?>
+                <?php } ?>
             </div>
 
         </div>
