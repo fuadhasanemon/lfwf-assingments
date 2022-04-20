@@ -29,6 +29,20 @@
 
     echo "The largest number of this array is : {$findMaxValue}";
 
+    // another way to solve this
+
+    $max_value = 0;
+
+    foreach($arr as $number){
+        if($number > $max_value){
+            $max_value = $number;
+        }
+
+        
+    }
+    echo "<pre>";
+    echo "Largest number is {$max_value}";
+
 
 
 ?>
