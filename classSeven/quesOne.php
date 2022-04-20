@@ -200,9 +200,6 @@
 
     ];
 
-    shuffle($questionSet);
-
-
 
     ?>
 
@@ -215,6 +212,7 @@
             
 
             <?php foreach($questionSet as $singleQuestion){ ?>        
+                <?php shuffle($singleQuestion['options']); ?>
 
             <div class="quesSet__question">
                 
