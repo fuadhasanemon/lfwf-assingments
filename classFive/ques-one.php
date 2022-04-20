@@ -27,10 +27,15 @@
 $prime__num = [12,34,2,6,78]; // This is a indexed array
 
 foreach( $prime__num as $prime){
-    if ($prime % 2 == 0){
-        echo "<pre>";
-       print_r($prime);
+
+    for($i = 2; $i <= $prime/2; $i++){
+        if ($prime % $i == 0){
+            echo "<pre>";
+            echo $prime;
+          
+        }
     }
+    
 }
 
 
