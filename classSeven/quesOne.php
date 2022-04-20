@@ -239,7 +239,7 @@
             <?php } ?>
 
             <div class="submit-btn py-5 text-center">
-                <button type="button" class="btn btn-outline-success custome__btn">Success</button>
+                <button type="button" class="btn btn-outline-success custome__btn">Submit</button>
             </div>
 
         </div>
