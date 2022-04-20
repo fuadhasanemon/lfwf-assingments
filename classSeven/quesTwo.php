@@ -52,7 +52,7 @@
 
                 'socials' => [
 
-                    'facebook.com', 'linkedin.com', 'github.com'
+                    'https://www.facebook.com/', 'https://www.linkedin.com/feed/', 'https://github.com/'
 
                 ],
 
@@ -73,7 +73,7 @@
 
                 'socials' => [
 
-                    'facebook.com', 'linkedin.com', 'github.com'
+                    'https://www.facebook.com/', 'https://www.linkedin.com/feed/', 'https://github.com/'
 
                 ],
 
@@ -94,7 +94,7 @@
 
                 'socials' => [
 
-                    'facebook.com', 'linkedin.com', 'github.com'
+                    'https://www.facebook.com/', 'https://www.linkedin.com/feed/', 'https://github.com/'
 
                 ],
 
@@ -119,7 +119,7 @@
         <div class="container">
 
             <div class="row">
-            <h1 class="py-5">Our Team</h1>
+            <h1 class="py-5 card__title">Our Team</h1>
 
             <?php foreach($ourTeam as $teamMember){ ?>
 
@@ -127,8 +127,8 @@
                     <div class="card" >
                         <img src="imgs/<?php echo $teamMember['image']; ?>" class="card-img-top" alt="...">
                         <div class="card-body text-center">
-                            <h5 class="card-title"><?php echo $teamMember['name']; ?></h5>
-                            <p class="card-text"><?php echo $teamMember['designation']; ?></p>
+                            <h5 class="card-title member__name"><?php echo $teamMember['name']; ?></h5>
+                            <p class="card-text member__designation"><?php echo $teamMember['designation']; ?></p>
 
                             
 

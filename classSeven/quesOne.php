@@ -67,6 +67,7 @@
     $questionSet = [
 
         [
+            'name' => 'question1',
 
             'question' => '1) HTML stands for -',
 
@@ -79,6 +80,7 @@
         ],
 
         [
+            'name' => 'question2',
 
             'question' => '2) The correct sequence of HTML tags for starting a webpage is -',
 
@@ -91,6 +93,7 @@
         ],
 
         [
+            'name' => 'question3',
 
             'question' => '3) Which of the following element is responsible for making the text bold in HTML?',
 
@@ -103,6 +106,7 @@
         ],
 
         [
+            'name' => 'question4',
 
             'question' => '4) Which of the following tag is used for inserting the largest heading in HTML?',
 
@@ -115,6 +119,7 @@
         ],
 
         [
+            'name' => 'question5',
 
             'question' => '5) Which of the following tag is used to insert a line-break in HTML?',
 
@@ -127,6 +132,7 @@
         ],
 
         [
+            'name' => 'question6',
 
             'question' => '6) How to create an unordered list (a list with the list items in bullets) in HTML?',
 
@@ -139,6 +145,7 @@
         ],
 
         [
+            'name' => 'question7',
 
             'question' => '7) How to create a hyperlink in HTML?',
 
@@ -151,6 +158,7 @@
         ],
 
         [
+            'name' => 'question8',
 
             'question' => '8) How to create an ordered list (a list with the list items in numbers) in HTML?',
 
@@ -163,6 +171,7 @@
         ],
 
         [
+            'name' => 'question9',
 
             'question' => '9) Which of the following element is responsible for making the text italic in HTML?',
 
@@ -175,6 +184,7 @@
         ],
 
         [
+            'name' => 'question10',
 
             'question' => '10) How to insert an image in HTML?',
 
@@ -202,10 +212,7 @@
 
             
 
-            <?php foreach($questionSet as $singleQuestion){ ?>
-
-                <?php  ?>
-                
+            <?php foreach($questionSet as $singleQuestion){ ?>        
 
             <div class="quesSet__question">
                 

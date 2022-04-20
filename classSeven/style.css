@@ -1,3 +1,21 @@
+.card {
+    transition: .5s all ease;
+    outline: none;
+    border-color: #e7e7e7;
+    
+}
+
+.card:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: .5s all ease;
+    border-color: #ffffff;
+}
+
+.card__title {
+    font-size: 40px;
+    color: #000000;
+}
+
 .card-img-top {
     padding: 30px;
 }
@@ -11,4 +29,24 @@
 
 .socials > ul > li {
     padding: 0 10px;
+}
+
+.socials > ul > li i {
+    font-size: 25px;
+    color: #000000;
+    transition: 0.3s all ease;
+}
+
+.socials > ul > li i:hover {
+    color: #494949;
+}
+
+.member__name {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.member__designation {
+    font-size: 16px;
+    font-weight: 400;
 }
