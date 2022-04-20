@@ -1,0 +1,14 @@
+.card-img-top {
+    padding: 30px;
+}
+
+.socials > ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.socials > ul > li {
+    padding: 0 10px;
+}

@@ -68,11 +68,11 @@
 
         [
 
-            'question' => 'What is loream ipsum 1?',
+            'question' => '1) HTML stands for -',
 
             'options' => [
 
-                'ans5', 'ans2', 'ans3', 'ans4'
+                'HighText Machine Language', 'HyperText and links Markup Language', 'HyperText Markup Language', 'None of these'
 
             ]
 
@@ -80,11 +80,11 @@
 
         [
 
-            'question' => 'What is loream ipsum 2?',
+            'question' => '2) The correct sequence of HTML tags for starting a webpage is -',
 
             'options' => [
 
-                'ans1', 'ans2', 'ans3', 'ans4'
+                'Head, Title, HTML, body', 'HTML, Body, Title, Head', 'HTML, Head, Title, Body', 'HTML, Head, Title, Body'
 
             ]
 
@@ -92,11 +92,95 @@
 
         [
 
-            'question' => 'What is loream ipsum 3?',
+            'question' => '3) Which of the following element is responsible for making the text bold in HTML?',
 
             'options' => [
 
-                'ans1', 'ans2', 'ans3', 'ans4'
+                '< pre >', '< a >', '< b >', '< br >'
+
+            ]
+
+        ],
+
+        [
+
+            'question' => '4) Which of the following tag is used for inserting the largest heading in HTML?',
+
+            'options' => [
+
+                '< h3 >', '< h1 >', '< h5 >', '< h6 >'
+
+            ]
+
+        ],
+
+        [
+
+            'question' => '5) Which of the following tag is used to insert a line-break in HTML?',
+
+            'options' => [
+
+                '< br >', '< a >', '< pre >', '< b >'
+
+            ]
+
+        ],
+
+        [
+
+            'question' => '6) How to create an unordered list (a list with the list items in bullets) in HTML?',
+
+            'options' => [
+
+                '< ul >', '< ol >', '< li >', '< i >'
+
+            ]
+
+        ],
+
+        [
+
+            'question' => '7) How to create a hyperlink in HTML?',
+
+            'options' => [
+
+                '< a href = "www.javatpoint.com" > javaTpoint.com < / >', '< a url = "www.javatpoint.com" javaTpoint.com / a >', '< a link = "www.javatpoint.com" > javaTpoint.com < / >', '< a > www.javatpoint.com <javaTpoint.com / a >'
+
+            ]
+
+        ],
+
+        [
+
+            'question' => '8) How to create an ordered list (a list with the list items in numbers) in HTML?',
+
+            'options' => [
+
+                '< ul >', '< ol >', '< li >', '< i >'
+
+            ]
+
+        ],
+
+        [
+
+            'question' => '9) Which of the following element is responsible for making the text italic in HTML?',
+
+            'options' => [
+
+                '< i >', '< italic >', '< it >', '< pre >'
+
+            ]
+
+        ],
+
+        [
+
+            'question' => '10) How to insert an image in HTML?',
+
+            'options' => [
+
+                '< img href = "jtp.png" / >', '< img url = "jtp.png" / >', '< img link = "jtp.png" / >', '< img src = "jtp.png" / >'
 
             ]
 
@@ -105,6 +189,8 @@
     ];
 
     shuffle($questionSet);
+
+
 
     ?>
 
@@ -136,6 +222,10 @@
                     </div>
 
                 <?php } ?>
+
+                <div class="divider py-3">
+                    <hr>
+                </div>
 
             </div>
 
