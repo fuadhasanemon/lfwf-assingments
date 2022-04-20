@@ -28,21 +28,7 @@
 
     $nums_list = [12, 34, 2, 6, 78]; // This is a indexed array
 
-<<<<<<< HEAD
-foreach( $prime__num as $prime){
-
-    for($i = 2; $i <= $prime/2; $i++){
-        if ($prime % $i == 0){
-            echo "<pre>";
-            echo $prime;
-          
-        }
-    }
     
-}
-=======
-    
->>>>>>> 697f991a464da0a823772199cb6a41018203ed20
 
     foreach($nums_list as $number){
         $is_prime = true;
