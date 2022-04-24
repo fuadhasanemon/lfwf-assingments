@@ -29,7 +29,7 @@
             return $age;
         }
 
-        ageDetector(70);
+        ageDetector(9);
         echo "<br>";
         ageDetector(30);
 
