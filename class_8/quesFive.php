@@ -15,7 +15,8 @@
 
         // $bmi = 0;
 
-        function bmiCalculator($weight, $height) {
+        function bmiCalculator($weight, $height=12) {
+            
             $bmi = $weight / pow($height, 2) ;
             $bmi = round($bmi, 2);
             
