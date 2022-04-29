@@ -11,6 +11,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Onpage php -->
+
+    <?php
+        if(isset($_POST['submitBtn'])) {
+            echo "<pre>";
+            print_r($_POST);
+            echo "</pre>";
+            die();
+        }
+    ?>
+
+    <!-- Onpage php -->
     
 
     <div class="section form">
@@ -39,7 +52,7 @@
                         <input type="password" name="pasword" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
                     
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" name="submitBtn" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
