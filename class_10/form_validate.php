@@ -35,18 +35,36 @@
 
     /**
      * 
-     * Validate email valid or not!
+     * For check Validate email valid or not!
      * 
      */
 
 
-     function validateEmail($email){
-         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+     function validateEmail($emailCheck){
+         if(filter_var($emailCheck, FILTER_VALIDATE_EMAIL)){
             return true;
          } else {
              return false;
          }
      }
+
+
+     /**
+      * Filter edumail filtering function
+      */
+
+      function filterEduMail($email){
+          $validEmails = ['bubt.edu.bd', 'nsu.edu.bd', 'brac.edu.bd'];
+
+          $email_arr = explode('@', $email, 2);
+
+          if (in_array($email_arr[1], $validEmails)){
+              return true;
+          } else {
+              return false;
+          }
+
+      }
 
 
     if (isset($_POST['submitBtn'])) {
@@ -58,8 +76,10 @@
 
         if (empty($userName) || empty($email) || empty($phone) || empty($pasword)) {
             $validationMsg = validate('All field are required');
-        } elseif(filter_var($email, FILTER_VALIDATE_EMAIL) == false){
+        } elseif(validateEmail($email) == false){
             $validationMsg = validate('Email is not valid', 'warning');
+        } elseif(filterEduMail($email) == false){
+            $validationMsg = validate('Email is not eligible for this registration', 'warning');
         } else {
             $validationMsg = validate('Thank you submission successfull', 'success');
         }
