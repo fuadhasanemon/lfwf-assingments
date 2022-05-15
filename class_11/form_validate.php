@@ -23,8 +23,9 @@
      * custome function
      */
 
-    function validate($message, $alertType="danger"){
-      return "<div class=\"alert alert-{$alertType} alert-dismissible fade show\" role=\"alert\">
+    function validate($message, $alertType = "danger")
+    {
+        return "<div class=\"alert alert-{$alertType} alert-dismissible fade show\" role=\"alert\">
                     {$message}!
                 <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                     <span aria-hidden=\"true\">&times;</span>
@@ -40,62 +41,75 @@
      */
 
 
-     function validateEmail($emailCheck){
-         if(filter_var($emailCheck, FILTER_VALIDATE_EMAIL)){
+    function validateEmail($emailCheck)
+    {
+        if (filter_var($emailCheck, FILTER_VALIDATE_EMAIL)) {
             return true;
-         } else {
-             return false;
-         }
-     }
-
-
-     /**
-      * Filter indivisual mail filtering function
-      */
-
-      function filterEduMail($email){
-          $validEmails = ['bubt.edu.bd', 'nsu.edu.bd', 'brac.edu.bd'];
-
-          $email_arr = explode('@', $email, 2);
-
-          if (in_array($email_arr[1], $validEmails)){
-              return true;
-          } else {
-              return false;
-          }
-
-      }
-
-
-      /**
-       * 
-       * Class 11
-       * Username validate with regular expression
-       * [/^ $/]
-       */
-
-       function usernameValidate($userName){
-
-            if(preg_match('/^\w{5,20}$/', $userName)){
-                return true;
-            } else {
-                return false;
-            }
-       }
-
-
-       /**
-        * Previous data will be store as refarence 
-        * Custom function
-        */
-
-        function oldData($field){
-            if(isset($field)){
-                echo $_POST[$field];
-            } else {
-                echo "something is wrong";
-            }
+        } else {
+            return false;
         }
+    }
+
+
+    /**
+     * Filter indivisual mail filtering function
+     */
+
+    function filterEduMail($email)
+    {
+        $validEmails = ['bubt.edu.bd', 'nsu.edu.bd', 'brac.edu.bd'];
+
+        $email_arr = explode('@', $email, 2);
+
+        if (in_array($email_arr[1], $validEmails)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    /**
+     * 
+     * Class 11
+     * Username validate with regular expression
+     * [/^ $/]
+     */
+
+    function usernameValidate($userName)
+    {
+
+        if (preg_match('/^\w{5,20}$/', $userName)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    /**
+     * Previous data will be store as refarence 
+     * Custom function
+     * Store old fields data
+     */
+
+    function oldData($field)
+    {
+        if (isset($field)) {
+            echo $_POST[$field];
+        } else {
+            echo "something is wrong";
+        }
+    }
+
+    /**
+     * Clear data after successfully form submition
+     * Custome function
+     */
+
+    // function clearFields(){
+    //     $_POST = '';
+    // }
 
 
     if (isset($_POST['submitBtn'])) {
@@ -108,17 +122,18 @@
 
         if (empty($userName) || empty($email) || empty($phone) || empty($pasword)) {
             $validationMsg = validate('All field are required');
-        } elseif (usernameValidate($userName) == false){
+        } elseif (usernameValidate($userName) == false) {
             $validationMsg = validate('Username not valid!');
-
-        } elseif(validateEmail($email) == false){
+        } elseif (validateEmail($email) == false) {
             $validationMsg = validate('Email is not valid', 'warning');
-        } elseif(filterEduMail($email) == false){
+        } elseif (filterEduMail($email) == false) {
             $validationMsg = validate('Email is not eligible for this registration', 'warning');
-        } elseif($age < 18 || $age > 60){
+        } elseif ($age < 18 || $age > 60) {
             $validationMsg = validate('You are under 18', 'warning');
         } else {
             $validationMsg = validate('Thank you submission successfull', 'success');
+            // clearFields();
+            // $_POST = '';
         }
     }
     ?>
@@ -130,9 +145,9 @@
         <div class="container">
 
             <?php
-                if(isset($validationMsg)){
-                    echo $validationMsg;
-                }
+            if (isset($validationMsg)) {
+                echo $validationMsg;
+            }
 
             ?>
 
@@ -159,6 +174,18 @@
                     <div class="form-group">
                         <label for="exampleInputPhone">Age</label>
                         <input type="text" name="age" value="<?php oldData("age"); ?>" class="form-control" id="exampleInputage" placeholder="Enter age">
+                    </div>
+                    
+                    <div class="form-group">
+                    <label for="exampleInputPhone">Gender</label> <br>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+                        </div>
                     </div>
 
                     <div class="form-group">
