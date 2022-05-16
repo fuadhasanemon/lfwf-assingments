@@ -95,10 +95,10 @@
 
     function oldData($field)
     {
-        if (isset($field)) {
+        if (isset($_POST[$field])) {
             echo $_POST[$field];
         } else {
-            echo "something is wrong";
+            echo '';
         }
     }
 
@@ -107,9 +107,9 @@
      * Custome function
      */
 
-    // function clearFields(){
-    //     $_POST = '';
-    // }
+    function clearFields(){
+        $_POST = '';
+    }
 
 
     if (isset($_POST['submitBtn'])) {
@@ -118,9 +118,12 @@
         $phone = $_POST['phone'];
         $age = $_POST['age'];
         $pasword =  $_POST['pasword'];
+        $gender =  $_POST['gender'];
+
+        echo $gender;
 
 
-        if (empty($userName) || empty($email) || empty($phone) || empty($pasword)) {
+        if (empty($userName) || empty($email) || empty($phone) || empty($gender) || empty($pasword)) {
             $validationMsg = validate('All field are required');
         } elseif (usernameValidate($userName) == false) {
             $validationMsg = validate('Username not valid!');
@@ -132,8 +135,7 @@
             $validationMsg = validate('You are under 18', 'warning');
         } else {
             $validationMsg = validate('Thank you submission successfull', 'success');
-            // clearFields();
-            // $_POST = '';
+            clearFields();
         }
     }
     ?>
@@ -153,7 +155,7 @@
 
             <div class="form__wrapper">
 
-                <form method="POST" action="">
+                <form method="POST" action="" >
 
                     <div class="form-group">
                         <label for="exampleInputName">Name</label>
@@ -179,12 +181,16 @@
                     <div class="form-group">
                     <label for="exampleInputPhone">Gender</label> <br>
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+                            <input type="radio" value="male" id="male" name="gender" class="custom-control-input">
+                            <label class="custom-control-label" for="male">Male</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+                            <input type="radio" value="female" id="female" name="gender" class="custom-control-input">
+                            <label class="custom-control-label" for="female">Female</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" value="other" id="other" name="gender" class="custom-control-input">
+                            <label class="custom-control-label" for="other">Other</label>
                         </div>
                     </div>
 
