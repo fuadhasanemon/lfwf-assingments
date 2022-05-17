@@ -119,8 +119,13 @@
         $age = $_POST['age'];
         $pasword =  $_POST['pasword'];
         $gender =  $_POST['gender'];
+        
 
-        echo $gender;
+        $agree_status = '';
+        if (isset($_POST['agree_status'])) {
+            $agree_status =  $_POST['agree_status'];
+        }
+
 
 
         if (empty($userName) || empty($email) || empty($phone) || empty($gender) || empty($pasword)) {
@@ -133,6 +138,8 @@
             $validationMsg = validate('Email is not eligible for this registration', 'warning');
         } elseif ($age < 18 || $age > 60) {
             $validationMsg = validate('You are under 18', 'warning');
+        } elseif($agree_status != 'yes'){
+            $validationMsg = validate('You have to agree the terms and condition', 'warning'); 
         } else {
             $validationMsg = validate('Thank you submission successfull', 'success');
             clearFields();
@@ -191,6 +198,15 @@
                         <div class="custom-control custom-radio custom-control-inline">
                             <input type="radio" value="other" id="other" name="gender" class="custom-control-input">
                             <label class="custom-control-label" for="other">Other</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" name="agree_status" type="checkbox" value="yes" id="agreeCheckbox">
+                        <label class="form-check-label" for="agreeCheckbox">
+                            Are you agree ?
+                        </label>
                         </div>
                     </div>
 
