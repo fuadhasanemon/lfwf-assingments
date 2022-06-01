@@ -1,15 +1,56 @@
+Question 01: 
+
+Practice class 13
+
+*** Create a Database name  user_information.
+
+*** In Users table 7 column:  id  , username , age , phone, address, created_at, updated_at
+
+*** In Products table 7 column: id, post_title , post_details, post_file, created_at, updated_at, deleted_at
+
+*** In comments table 3 column:  id, post_id, comment, created_at, updated_at, deleted_at
+
+*** make a single & multiple insert query for every table.
+
+*** Make a update query and also make a delete query for every table
+
+
+
+
+
+******** For Create Database ********
+
+CREATE DATABASE user_information;
+
+
+******** For Create table for users ********
+
+CREATE TABLE Users (
+    id INT NOT NULL PRIMARY KEY,
+    username VARCHAR(255),
+    age INT,
+    phone INT,
+    address TEXT,
+    created_at TIMESTAMP,
+    updated_at DATETIME
+);
+
+
+-------------*** Same for the Products table and comments table ***-------------
+
+
 ******** For insert data into table ********
 
--- User table
+-- Users table
 
 -- Single value input
 
-INSERT INTO user_information (id, username, age, phone, address, created_at, updated_at)
+INSERT INTO Users (id, username, age, phone, address, created_at, updated_at)
 VALUES ('John', '26', '01647335376', 'Dhaka BD', '22-11-2022 6:18:41', '12-12-2022 8:19:41');
 
 -- Multiple value
 
-INSERT INTO user_information (id, username, age, phone, address, created_at, updated_at)
+INSERT INTO Users (id, username, age, phone, address, created_at, updated_at)
 VALUES ('Fuad', '27', '01647335374', 'Dhaka BD', '18-10-2022 9:18:42', '12-12-2022 8:20:41'),
 VALUES ('Hasan', '24', '01647335373', 'Selhet BD', '12-11-2022 6:18:00', '12-12-2022 9:19:41'),
 VALUES ('Emon', '25', '01647335375', 'Rangpur BD', '20-12-2021 3:16:41', '12-12-2022 8:12:41');
@@ -48,10 +89,10 @@ VALUES ('12', 'This is awesome', '8-12-2022 12:11:32', '11-12-2022 8:20:41', '12
 
 ******** For Update data from table ********
 
--- Update data in user_information table.
+-- Update data in users table.
 
 
-UPDATE user_information SET username='Doe' WHERE id=2;
+UPDATE users SET username='Doe' WHERE id=2;
 
 
 
